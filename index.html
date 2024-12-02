@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para la dueña de mi corazón</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #ffb3c6, #ffcce7);
+            text-align: center;
+            color: #800040;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-top: 20px;
+            animation: fadeIn 2s;
+        }
+
+        p {
+            font-size: 1.2em;
+            animation: fadeIn 2s;
+        }
+
+        .letter {
+            background: #ffffffdd;
+            margin: 20px auto;
+            padding: 20px;
+            width: 90%;
+            max-width: 600px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            animation: slideIn 2s;
+        }
+
+        .letter p {
+            text-align: justify;
+        }
+
+        .gallery {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 20px;
+        }
+
+        .gallery img {
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .gallery-text {
+            display: none;
+            margin-top: 10px;
+            color: #800040;
+            font-weight: bold;
+            animation: fadeIn 1s;
+        }
+
+        footer {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #800040;
+            animation: fadeIn 2s;
+        }
+
+        audio {
+            margin: 20px 0;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+    <script>
+        function showText(id) {
+            // Oculta todos los textos
+            const allTexts = document.querySelectorAll('.gallery-text');
+            allTexts.forEach(text => text.style.display = 'none');
+
+            // Muestra el texto relacionado con la imagen
+            const text = document.getElementById(id);
+            text.style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <h1>Para la dueña de mi corazón</h1>
+    <p>Amor mío, esta página está hecha especialmente para ti. Con el tiempo, esta página se volvera muy grande.</p>
+
+    <!-- Carta romántica -->
+    <div class="letter">
+        <h2>Una Carta Para Ti</h2>
+        <p>
+            Mi amor, cada día a tu lado es un regalo que nunca podría agradecer lo suficiente. Tus sonrisas iluminan mi vida y tus abrazos son mi refugio favorito. 
+            En cada momento, ya sea pequeño o grande, tú haces que mi mundo sea más hermoso. Esta página es un pequeño recordatorio de lo mucho que significas para mí y de cuánto te amo. 
+            Eres mi musa, mi razón de ser, y cada latido de mi corazón grita tu nombre. Gracias por ser tú, por existir, y por ser mi gran amor.
+        </p>
+        <p>Te amo con todo mi ser, hoy, mañana y siempre. 💖</p>
+    </div>
+
+    <!-- Galería de fotos -->
+    <h2>Momentos Especiales</h2>
+    <h2>Toca la imagen</h2>
+    <div class="gallery">
+        <div>
+            <img src="./IMG/1.jpg" alt="Momento especial 1" onclick="showText('text1')">
+            <p id="text1" class="gallery-text">Ese beso lo sentí muy romantico, TE AMO. 💖</p>
+        </div>
+        <div>
+            <img src="./IMG/2.jpg" alt="Momento especial 2" onclick="showText('text2')">
+            <p id="text2" class="gallery-text">Aquí estábamos con nuestra primer foto. Un recuerdo inolvidable. ❤️</p>
+        </div>
+        <div>
+            <img src="./IMG/3.jpg" alt="Momento especial 3" onclick="showText('text3')">
+            <p id="text3" class="gallery-text">Esta foto simboliza uno de los momentos que siempre recordaré, contigo. 🌸</p>
+        </div>
+        <div>
+            <img src="./IMG/IMG_2241.jpg" alt="Momento especial 4" onclick="showText('text4')">
+            <p id="text4" class="gallery-text">En este día, comezó todo. 🌟</p>
+        </div>
+    </div>
+
+    <!-- Reproductor de audio -->
+    <audio autoplay loop>
+        <source src="./audio/principe.mp3" type="audio/mp3">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+
+    <footer>
+        Hecho con 💕 solo para ti.
+    </footer>
+</body>
+</html>
+
